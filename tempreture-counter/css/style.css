@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(73, 73, 73);
+}
+
+.container {
+    background-color: rgb(105, 107, 107);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 10px 100px 10px 100px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+label {
+    color: rgb(228, 225, 220);
+}
+
+.inp {
+    text-align: center;
+    border-radius: 20px;
+    height: 30px;
+    width: 90%;
+    border: 1px solid transparent;
+}
+.formula {
+    text-align: center;
+    background-color: brown;
+    border-radius: 20px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        height: 100px;
+        margin: 100px 100px 100px 100px;
+        display: flex;
+        align-items: center;
+    }
+}
