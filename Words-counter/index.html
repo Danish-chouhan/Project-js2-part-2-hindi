@@ -3,60 +3,16 @@
 
 <head>
     <title>Word Counter</title>
-    <style>
-        body {
-            padding: 100px 100px;
-        }
-
-        h1 {
-            text-align: center;
-            background-color: rgb(184, 210, 219);
-        }
-
-        p {
-            text-align: center;
-            background-color:  rgb(184, 210, 219);
-            margin: 0px 0px 0px 0px;
-        }
-
-        span {
-            margin: 10px;
-        }
-
-        #textbox {
-            width: 98.4%;
-            margin: -22px 0px 0px 0px;
-            border: 2px solid rgb(184, 210, 219);
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <h1>Words Counter</h1>
     <textarea name="" id="textbox" cols="30" rows="10"></textarea>
     <p><span id="word">0</span>Words <span id="char">0</span>Character</p>
-<h1 class="date"></h1>
+    <h1 class="date"></h1>
 
 </body>
-<script>
-    let textbox = document.getElementById("textbox");
-
-    textbox.addEventListener('input', function () {
-        var text = this.value;
-        let char = text.length;
-        document.getElementById("char").innerHTML = char;
-
-        text = text.trim();
-        let word = text.split(" ");
-        let cleanList = word.filter(function (elm) {
-            return elm != "";
-        });
-        document.getElementById('word').innerHTML = cleanList.length
-    })
-
-    var a = new Date()
-    var option = {hour : 'numeric' , minute : "numeric" ,second : 'numeric'}
-    document.querySelector(".date").textContent = a.toLocaleTimeString("en-US",option)
-</script>
+<script src="./js/main.js"></script>
 
 </html>
